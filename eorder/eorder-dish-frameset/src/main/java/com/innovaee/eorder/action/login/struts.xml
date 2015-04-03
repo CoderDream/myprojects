@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+                        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="com.innovaee.eorder.action.login" namespace="/login"
+        extends="struts-base">
+
+        <action name="login" class="com.innovaee.eorder.action.login.LoginAction"
+            method="login">
+            <result name="success">/pages/login/login.jsp</result>
+        </action>
+
+        <action name="doLogin" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doLogin">
+            <result name="success">/pages/main/main.jsp</result>
+        </action>
+
+        <action name="doLogout" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doLogout">
+            <result name="success">/pages/main/login.jsp</result>
+        </action>
+
+        <action name="doLogout" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doLogout">
+            <result name="success">/pages/main/login.jsp</result>
+        </action>
+
+        <action name="left" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doLeft">
+            <result name="success">/pages/main/left.jsp</result>
+        </action>
+        <action name="right" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doRight">
+            <result name="success">/pages/main/right.jsp</result>
+        </action>
+        <action name="header" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doHeader">
+            <result name="success">/pages/main/top.jsp</result>
+        </action>
+
+        <action name="userInfo" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doUserInfo">
+            <result name="success">/pages/main/userInfo.jsp</result>
+        </action>
+
+        <action name="bottom" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doBottom">
+            <result name="success">/pages/main/bottom.jsp</result>
+        </action>
+
+        <action name="computer" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doComputer">
+            <result name="success">/pages/main/computer.jsp</result>
+        </action>
+
+        <action name="default" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doDefault">
+            <result name="success">/pages/main/default.jsp</result>
+        </action>
+
+        <action name="error" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doError">
+            <result name="success">/pages/main/error.jsp</result>
+        </action>
+
+        <action name="filelist" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doFilelist">
+            <result name="success">/pages/main/filelist.jsp</result>
+        </action>
+
+        <action name="form" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doForm">
+            <result name="success">/pages/main/form.jsp</result>
+        </action>
+
+        <action name="imglist" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doImglist">
+            <result name="success">/pages/main/imglist.jsp</result>
+        </action>
+
+        <action name="imglist1" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doImglist1">
+            <result name="success">/pages/main/imglist1.jsp</result>
+        </action>
+
+        <action name="imgtable" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doImgtable">
+            <result name="success">/pages/main/imgtable.jsp</result>
+        </action>
+
+        <action name="index" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doIndex">
+            <result name="success">/pages/main/index.jsp</result>
+        </action>
+
+        <action name="tab" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doTab">
+            <result name="success">/pages/main/tab.jsp</result>
+        </action>
+
+        <action name="tools" class="com.innovaee.eorder.action.login.LoginAction"
+            method="doTools">
+            <result name="success">/pages/main/tools.jsp</result>
+        </action>
+
+    </package>
+</struts>
