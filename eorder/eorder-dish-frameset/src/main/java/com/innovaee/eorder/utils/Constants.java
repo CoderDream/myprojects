@@ -54,7 +54,7 @@ public class Constants {
     public static final String DEFAULT_CATEGORY = "默认";
 
     /** 默认菜单分类图片 */
-    public static final String DEFAULT_CATEGORY_PIC = "/default_catgory.png";
+    public static final String DEFAULT_CATEGORY_PIC = "/default_category.png";
 
     /** 默认菜单分类图片 */
     public static final String DEFAULT_DISH_PIC = "/default_dish.png";

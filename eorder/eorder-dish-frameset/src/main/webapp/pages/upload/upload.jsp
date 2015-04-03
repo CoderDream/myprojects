@@ -9,7 +9,8 @@
             + path;
 %>
 <base target="_self">
-<script type="text/javascript" src="../resources/js/upload.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/jquery.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/upload.js"></script>
 
 <div class="formbody">
 	<div id="usual1" class="usual">

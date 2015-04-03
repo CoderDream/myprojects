@@ -11,15 +11,11 @@
 
     <package name="com.innovaee.eorder.action.upload" namespace="/upload"
         extends="struts-base">
-        <result-types>
-            <result-type name="tiles"
-                class="org.apache.struts2.views.tiles.TilesResult" />
-        </result-types>
 
         <action name="upload" class="com.innovaee.eorder.action.upload.FileUploadAction"
             method="upload">
-            <result name="input" type="tiles">upload</result>
-            <result type="tiles">upload</result>
+            <result name="input">/pages/upload/upload.jsp</result>
+            <result name="success">/pages/upload/upload.jsp</result>
         </action>
 
         <action name="uploadImage" class="com.innovaee.eorder.action.upload.FileUploadAction"
@@ -32,17 +28,11 @@
                 </param>
             </interceptor-ref>
 
-            <result name="input" type="tiles">upload</result>
-            <result type="tiles">upload</result>
+            <result name="input">/pages/upload/upload.jsp</result>
+            <result name="success">/pages/upload/upload.jsp</result>
             <param name="uploadDir">/resources/images/dish</param>
         </action>
 
-        <action name="multiFileUpload"
-            class="com.innovaee.eorder.action.upload.MultiFileUploadAction">
-            <result name="input">/multiFileUpload.jsp</result>
-            <result name="success">/multiFileSuccess.jsp</result>
-            <param name="uploadDir">/WEB-INF/UploadFiles</param>
-        </action>
 
     </package>
 </struts>

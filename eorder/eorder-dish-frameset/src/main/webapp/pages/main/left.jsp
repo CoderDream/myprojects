@@ -43,7 +43,9 @@ $(function(){
     	<ul class="menuson">
         <li><cite></cite><a href="<%=request.getContextPath()%>/login/index.action" target="rightFrame">首页模版</a><i></i></li>
         <li><cite></cite><a href="<%=request.getContextPath()%>/login/default.action" target="rightFrame">默认模版</a><i></i></li>
-        <li class="active"><cite></cite><a href="<%=request.getContextPath()%>/login/right.action" target="rightFrame">数据列表</a><i></i></li>
+        <li><cite></cite><a href="<%=request.getContextPath()%>/category/category.action" target="rightFrame">菜品分类管理</a><i></i></li>
+        <li class="active"><cite></cite><a href="<%=request.getContextPath()%>/dish/dish.action" target="rightFrame">菜品管理</a><i></i></li>
+        <li><cite></cite><a href="<%=request.getContextPath()%>/login/right.action" target="rightFrame">数据列表</a><i></i></li>
         <li><cite></cite><a href="<%=request.getContextPath()%>/login/imgtable.action" target="rightFrame">图片数据表</a><i></i></li>
         <li><cite></cite><a href="<%=request.getContextPath()%>/login/form.action" target="rightFrame">添加编辑</a><i></i></li>
         <li><cite></cite><a href="<%=request.getContextPath()%>/login/imglist.action" target="rightFrame">图片列表</a><i></i></li>

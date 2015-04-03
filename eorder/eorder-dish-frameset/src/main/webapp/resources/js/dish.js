@@ -64,18 +64,38 @@ function query() {
 
 // 上传
 function openUploadPage() {
+	//alert('openUploadPage');
+	if (window.ActiveXObject) { // IE
+		var returnValue = window.showModalDialog("../upload/upload.action",
+				window, "dialogWidth:630px;status:no;dialogHeight:440px");
+		if (returnValue != null) {
+			setValue(returnValue);
+		}
+	} else { // 非IE
+		window.open("../upload/upload.action",
+						'newwindow',
+						'height=440,width=630,top=150,left=300,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no');
+	}
+
 	// 接收父页面上传回的值
-	var newFileName = window
-			.showModalDialog("../upload/upload.action", null,
-					"dialogWidth=800px;dialogHeight=600px;status=no;help=no;scrollbars=no");
+	//var newFileName = window
+	//		.showModalDialog("../upload/upload.action", null,
+	//				"dialogWidth=800px;dialogHeight=600px;status=no;help=no;scrollbars=no");
 	// newFileName = "" + newFileName;
+	//$("#picPath").val("/dish/" + newFileName);
+	// 改变图片源，实时刷新图片
+	//$("#dishPic").attr("src", "../resources/images/dish/" + newFileName);
+}
+
+function setValue(newFileName) {
+	alert("setValue" + newFileName);
+	$("newFileName").val(newFileName);
 	$("#picPath").val("/dish/" + newFileName);
 	// 改变图片源，实时刷新图片
 	$("#dishPic").attr("src", "../resources/images/dish/" + newFileName);
 }
 
 function save() {
-	alert("save #1");
 	// 取得用户输入的分类
 	var categoryId = $("#categoryId").val();
 
@@ -83,7 +103,6 @@ function save() {
 	if (null == categoryId || '' == categoryId) {
 		$("#categoryId").val("1");
 	}
-	alert("save #2");
 	$("[name='saveForm']").attr("action", "save.action");
 	$("[name='saveForm']").attr("method", "post");
 	$("[name='saveForm']").submit();
@@ -120,6 +139,7 @@ function saveBack() {
 	$("[name='saveForm']").attr("method", "post");
 	$("[name='saveForm']").submit();
 }
+
 
 $(function() {
 	var categoryId = $("#categoryId").val();

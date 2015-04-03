@@ -64,8 +64,17 @@ function uploadFile() {
 function closeWind(){
 	// 取得用户输入的分类
 	var newFileName = $("#newFileName").val();
-    parent.window.returnValue = newFileName;
-    window.close();
+    
+    
+    if(window.ActiveXObject){ //IE  
+    	parent.window.returnValue = newFileName;
+        window.close();
+    }else{ //非IE  
+        if(window.opener) {  
+            window.opener.setValue(newFileName) ;  
+        }  
+        window.close();  
+    }  
 }
 
 function save() {
